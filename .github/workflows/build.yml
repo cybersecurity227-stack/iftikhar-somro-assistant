@@ -29,11 +29,11 @@ jobs:
           flutter create --org com.iftikhar --project-name iftikhar_assistant .
           flutter pub add google_generative_ai battery_plus torch_light flutter_tts
 
-      - name: Build Release APK
-        run: flutter build apk --release
+      - name: Build Debug APK
+        run: flutter build apk --debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Iftikhar-Somro-Assistant-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
